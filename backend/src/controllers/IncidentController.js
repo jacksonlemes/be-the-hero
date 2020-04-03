@@ -2,7 +2,6 @@ const connection = require('../database/connection');
 
 module.exports = {
     async index (request, response) {
-        //const {page = 1} = request.body;
         const {page = 1} = request.query;
 
         const [cont] = await connection("incidents").count(); //[] para pegar o primeiro indice
